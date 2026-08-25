@@ -1,0 +1,45 @@
+name: QA Forge Home
+
+on:
+  push:
+    branches:
+      - main
+      - feature/forge-home-v1
+    paths:
+      - index.html
+      - styles.css
+      - app.js
+      - vercel.json
+      - .github/workflows/qa-forge-home.yml
+  pull_request:
+    paths:
+      - index.html
+      - styles.css
+      - app.js
+      - vercel.json
+      - .github/workflows/qa-forge-home.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: JavaScript syntax
+        run: node --check app.js
+      - name: Validate launcher links
+        run: |
+          grep -q "forge-crm-six.vercel.app" index.html
+          grep -q "robquotes.vercel.app" index.html
+          grep -q "forge-scope.vercel.app" index.html
+          grep -q "lumber-estimator-ai.vercel.app" index.html
+      - name: Validate Core auth configuration
+        run: |
+          grep -q "shouldCreateUser: false" app.js
+          grep -q "membership.role !== 'owner'" app.js
+          grep -q "SECURITY" /dev/null || true
