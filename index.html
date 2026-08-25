@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0c0e" />
+  <meta name="description" content="Forge Home — secure launcher for the Forge Suite." />
+  <title>Forge Home</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main id="app" class="shell" aria-live="polite">
+    <section id="loading-view" class="center-stage">
+      <div class="forge-mark">F</div>
+      <div class="loading-copy">Opening Forge…</div>
+    </section>
+
+    <section id="login-view" class="login-stage hidden">
+      <div class="login-panel">
+        <div class="brand-lockup">
+          <div class="forge-mark large">F</div>
+          <div>
+            <div class="brand-name">FORGE</div>
+            <div class="brand-subtitle">CORE SUITE</div>
+          </div>
+        </div>
+
+        <div class="login-copy">
+          <div class="eyebrow">Forge Home</div>
+          <h1>One door into the whole suite.</h1>
+          <p>Sign in to open CRM, Reader, Scope and Quoter from one clean workspace.</p>
+        </div>
+
+        <div class="user-card">
+          <div class="avatar">R</div>
+          <div class="user-copy">
+            <strong>Rob</strong>
+            <span>Forge Owner · Proof of Concept</span>
+          </div>
+          <span class="owner-pill">OWNER</span>
+        </div>
+
+        <label class="field">
+          <span>Forge email</span>
+          <input id="email-input" type="email" autocomplete="email" placeholder="Enter your Forge email" />
+        </label>
+
+        <button id="login-button" class="primary-button" type="button">
+          <span>Send passwordless sign-in link</span>
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <div id="login-message" class="message hidden"></div>
+        <div class="security-note">No password required. Forge Core verifies the signed-in owner before showing the suite.</div>
+      </div>
+    </section>
+
+    <section id="home-view" class="home-stage hidden">
+      <header class="topbar">
+        <div class="brand-lockup compact">
+          <div class="forge-mark">F</div>
+          <div>
+            <div class="brand-name">FORGE</div>
+            <div class="brand-subtitle">HOME</div>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="core-status">
+            <span class="status-dot"></span>
+            <div>
+              <strong>Forge Core</strong>
+              <span id="org-name">Connected</span>
+            </div>
+          </div>
+          <button id="logout-button" class="ghost-button" type="button">Sign out</button>
+        </div>
+      </header>
+
+      <div class="home-content">
+        <section class="hero">
+          <div>
+            <div class="eyebrow">Welcome back</div>
+            <h1>What are you working on?</h1>
+            <p>Every Forge module works from the same Core records. Pick an app and keep moving.</p>
+          </div>
+          <div class="profile-badge">
+            <div class="avatar large-avatar">R</div>
+            <div>
+              <span>Signed in as</span>
+              <strong>Rob</strong>
+              <small id="location-name">J&K Home Building Centre</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="module-grid" aria-label="Forge applications">
+          <a class="module-card crm" href="https://forge-crm-six.vercel.app">
+            <div class="card-topline"><span class="module-icon">CRM</span><span class="live-pill">LIVE</span></div>
+            <div class="card-copy">
+              <h2>Forge CRM</h2>
+              <p>Customers, quotes, projects, tasks and delivery operations.</p>
+            </div>
+            <div class="card-footer"><span>Open CRM</span><span>↗</span></div>
+          </a>
+
+          <a class="module-card reader" href="https://robquotes.vercel.app">
+            <div class="card-topline"><span class="module-icon">RD</span><span class="live-pill">LIVE</span></div>
+            <div class="card-copy">
+              <h2>Forge Reader</h2>
+              <p>Upload drawings and PDFs, extract structure and prepare them for Scope.</p>
+            </div>
+            <div class="card-footer"><span>Open Reader</span><span>↗</span></div>
+          </a>
+
+          <a class="module-card scope" href="https://forge-scope.vercel.app">
+            <div class="card-topline"><span class="module-icon">SC</span><span class="live-pill">LIVE</span></div>
+            <div class="card-copy">
+              <h2>Forge Scope</h2>
+              <p>Build, review and version project scope before estimating begins.</p>
+            </div>
+            <div class="card-footer"><span>Open Scope</span><span>↗</span></div>
+          </a>
+
+          <a class="module-card quoter" href="https://lumber-estimator-ai.vercel.app">
+            <div class="card-topline"><span class="module-icon">QT</span><span class="live-pill">LIVE</span></div>
+            <div class="card-copy">
+              <h2>Forge Quoter</h2>
+              <p>AI takeoffs, estimator review, pricing, margin and Core quote creation.</p>
+            </div>
+            <div class="card-footer"><span>Open Quoter</span><span>↗</span></div>
+          </a>
+        </section>
+
+        <section class="flow-strip">
+          <div class="flow-label">CORE WORKFLOW</div>
+          <div class="flow-track">
+            <span>Reader</span><i>→</i><span>Scope</span><i>→</i><span>Takeoff</span><i>→</i><span>Pricing</span><i>→</i><span>CRM</span>
+          </div>
+          <div class="flow-note">One project. One history. One Forge Core.</div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
