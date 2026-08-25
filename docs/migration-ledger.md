@@ -15,7 +15,7 @@ This repository was created after the initial Core database had already been bui
 | 20260825182547 | `add_idempotent_legacy_keys` | Adds conservative uniqueness/idempotency support for legacy CRM migration sources. |
 | 20260825183202 | `enable_pg_net_for_internal_jobs` | Enables internal HTTP support used during one-time controlled migration/bootstrap work. |
 | 20260825185030 | `crm_direct_write_rpcs_v1` | Adds atomic CRM quote creation, manual revision and quote-to-project conversion RPCs. |
-| 2026082519xxxx | `forge_reader_analysis_runs_v1` | Adds tenant-scoped document analysis run records for Forge Reader. |
+| 20260825185822 | `forge_reader_analysis_runs_v1` | Adds tenant-scoped document analysis run records for Forge Reader. |
 
 ## Current production data checkpoint
 
