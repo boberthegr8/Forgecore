@@ -1,0 +1,18 @@
+:root {
+  --forge-bg: #0b0c0e;
+  --forge-sidebar: #0f1012;
+  --forge-surface: #151619;
+  --forge-surface-raised: #191b1f;
+  --forge-border: #292c31;
+  --forge-border-soft: #21242a;
+  --forge-text: #f4f4f5;
+  --forge-secondary: #a5a9b1;
+  --forge-muted: #6f747d;
+  --forge-accent: #ff7617;
+  --forge-accent-hover: #ff8b39;
+  --forge-accent-soft: rgba(255, 118, 23, .10);
+  --forge-success: #4ade80;
+  --forge-warning: #fbbf24;
+  --forge-danger: #f87171;
+  --forge-info: #60a5fa;
+}
